@@ -31,7 +31,7 @@ namespace MegBit
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Console.WriteLine("DrunkPC Prank Application by: Hacker (aka. First Last");
+            Console.WriteLine("MegaBit Prank Application by: Hacker (aka. First Last");
 
             // Check for command line arguelents and assign the new values
             if (args.Length >= 2)
@@ -41,10 +41,10 @@ namespace MegBit
             }
 
             // Create all threads that manipulate all of the inputs and outputs to the system
-            Thread drunkMouseThread = new Thread(new ThreadStart(DrunkMouseThread));
-            Thread drunkKeyBoardThread = new Thread(new ThreadStart(DrunkKeyboardThread));
-            Thread drunkSoundThread = new Thread(new ThreadStart(DrunkSoundThread));
-            Thread drunkPopupThread = new Thread(new ThreadStart(DrunkPopupThread));
+            Thread megabitMouseThread = new Thread(new ThreadStart(megabitMouseThread));
+            Thread megabitKeyBoardThread = new Thread(new ThreadStart(megabitKeyboardThread));
+            Thread megabitSoundThread = new Thread(new ThreadStart(megabitSoundThread));
+            Thread megabitPopupThread = new Thread(new ThreadStart(megaPopupThread));
 
 
             DateTime future = DateTime.Now.AddSeconds(_startupDelaySeconds);
@@ -56,10 +56,10 @@ namespace MegBit
 
 
             // Start all of the threads
-            drunkMouseThread.Start();
-            drunkKeyBoardThread.Start();
-            drunkSoundThread.Start();
-            drunkPopupThread.Start();
+            megabitMouseThread.Start();
+            megabitKeyBoardThread.Start();
+            megabitSoundThread.Start();
+            megabitPopupThread.Start();
 
             future = DateTime.Now.AddSeconds(_totalDurationSeconds);
             while (future > DateTime.Now)
@@ -69,10 +69,10 @@ namespace MegBit
 
             Console.WriteLine("Terminating all threads");
             // Kill all threads and exit application
-            drunkMouseThread.Abort();
-            drunkKeyBoardThread.Abort();
-            drunkSoundThread.Abort();
-            drunkPopupThread.Abort();
+            megabitMouseThread.Abort();
+            megabitKeyBoardThread.Abort();
+            megabitSoundThread.Abort();
+            megabitPopupThread.Abort();
 
 
         }
