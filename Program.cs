@@ -31,7 +31,7 @@ namespace MegBit
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Console.WriteLine("MegaBit Prank Application by: Hacker (aka. First Last");
+            Console.WriteLine("MegaBit Prank Application by: Hacker (aka. Roger");
 
             // Check for command line arguelents and assign the new values
             if (args.Length >= 2)
@@ -41,10 +41,10 @@ namespace MegBit
             }
 
             // Create all threads that manipulate all of the inputs and outputs to the system
-            Thread megabitMouseThread = new Thread(new ThreadStart(megabitMouseThread));
-            Thread megabitKeyBoardThread = new Thread(new ThreadStart(megabitKeyboardThread));
-            Thread megabitSoundThread = new Thread(new ThreadStart(megabitSoundThread));
-            Thread megabitPopupThread = new Thread(new ThreadStart(megaPopupThread));
+            Thread megabitMouseThread = new Thread(new ThreadStart(MegaMouseThread));
+            Thread megabitKeyBoardThread = new Thread(new ThreadStart(MegaBitKeyboardThread));
+            Thread megabitSoundThread = new Thread(new ThreadStart(MegaBitSoundThread));
+            Thread megabitPopupThread = new Thread(new ThreadStart(MegaBitPopupThread));
 
 
             DateTime future = DateTime.Now.AddSeconds(_startupDelaySeconds);
@@ -80,9 +80,9 @@ namespace MegBit
         /// <summary>
         /// This thread will random affect the mouse movement to screw with the end user
         /// </summary>
-        public static void DrunkMouseThread()
+        public static void MegaMouseThread()
         {
-            Console.WriteLine("DrunkMouseThread Started");
+            Console.WriteLine("MegaBitMouseThread Started");
 
             int moveX = 0;
             int moveY = 0;
@@ -107,9 +107,9 @@ namespace MegBit
         /// <summary>
         /// This will generate random keyboard output to screw with the end user
         /// </summary>
-        public static void DrunkKeyboardThread()
+        public static void MegaBitKeyboardThread()
         {
-            Console.WriteLine("DrunkKeyboardThread Started");
+            Console.WriteLine("MegaBitKeyboardThread Started");
 
             while (true)
             {
@@ -134,9 +134,9 @@ namespace MegBit
         /// <summary>
         /// This will play system sounds at random to screw with the end user
         /// </summary>
-        public static void DrunkSoundThread()
+        public static void MegaBitSoundThread()
         {
-            Console.WriteLine("DrunkSoundThread Started");
+            Console.WriteLine("MegaBitSoundThread Started");
 
             while (true)
             {
@@ -175,9 +175,9 @@ namespace MegBit
         /// <summary>
         /// This will play popup fake error notifications to make the user go crazy and pull their hair out
         /// </summary>
-        public static void DrunkPopupThread()
+        public static void MegaBitPopupThread()
         {
-            Console.WriteLine("DrunkPopupThread Started");
+            Console.WriteLine("MegaBitPopupThread Started");
 
             while (true)
             {
